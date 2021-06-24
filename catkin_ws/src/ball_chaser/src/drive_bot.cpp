@@ -14,9 +14,6 @@ bool handle_drive_request(ball_chaser::DriveToTarget::Request& req,
   moter_command.angular.z = req.angular_z;
   moter_command_publisher.publish(moter_command);
 
-  // Wait 1 second for velocities to settle
-  ros::Duration(1).sleep();
-  
   // Return a response message
   res.msg_feedback = "Velocities set - linear_x: " + std::to_string(req.linear_x) + " , angular_z: " + std::to_string(req.angular_z);
   ROS_INFO_STREAM(res.msg_feedback);
