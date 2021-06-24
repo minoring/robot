@@ -13,7 +13,7 @@
   </joint>
 
   <link name='chassis'>
-    <pose>0 0 0.1 0 0 0</pose>
+   <pose>0 0 0.1 0 0 0</pose>
 
     <inertial>
       <mass value="15.0"/>
@@ -28,14 +28,14 @@
     <collision name='collision'>
       <origin xyz="0 0 0" rpy="0 0 0"/>
       <geometry>
-        <box size=".4 .2 .1"/>
+        <cylinder radius="0.3" length="0.1"/>
       </geometry>
     </collision>
 
     <visual name='chassis_visual'>
       <origin xyz="0 0 0" rpy="0 0 0"/>
       <geometry>
-        <box size=".4 .2 .1"/>
+        <cylinder radius="0.3" length="0.1"/>
       </geometry>
     </visual>
 
@@ -202,5 +202,14 @@
     <child link="hokuyo"/>
   </joint>
 
+  <gazebo reference="chassis">
+    <material>Gazebo/Orange</material>
+  </gazebo>
+  <gazebo reference="left_wheel">
+    <material>Gazebo/Turquoise</material>
+  </gazebo>
+  <gazebo reference="right_wheel">
+    <material>Gazebo/Turquoise</material>
+  </gazebo>
 </robot>
 
