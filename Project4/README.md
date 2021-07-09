@@ -1,4 +1,4 @@
-# Implementation of Real-Time Appearance-Based Mapping in ROS and Gazebo  
+# Project4: Implementation of Real-Time Appearance-Based Mapping
 
 
 ![](https://github.com/minoring/robot/blob/master/Project4/resources/Mapping.png)
