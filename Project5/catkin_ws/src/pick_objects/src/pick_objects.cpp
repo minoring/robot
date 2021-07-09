@@ -6,6 +6,11 @@
 // through a SimpleActionClient
 typedef actionlib::SimpleActionClient<move_base_msgs::MoveBaseAction> MoveBaseClient;
 
+double pickup_x = -3.0;
+double pickup_y = -1.0;
+double dropoff_x = -1.0;
+double dropoff_y = -1.5;
+
 int main(int argc, char** argv) {
   // Initialize the simple_navigation_goals node
   ros::init(argc, argv, "pick_objects");
@@ -25,8 +30,8 @@ int main(int argc, char** argv) {
   goal.target_pose.header.stamp = ros::Time::now();
 
   // Define a position and orientation for the pickup zone
-  goal.target_pose.pose.position.x = -1.0;
-  goal.target_pose.pose.position.y = -1.0;
+  goal.target_pose.pose.position.x = pickup_x;
+  goal.target_pose.pose.position.y = pickup_y;
   goal.target_pose.pose.orientation.w = 1.0;
 
   // send the goal position and orientation for the robot to reach
@@ -46,8 +51,8 @@ int main(int argc, char** argv) {
   }
 
   // Define a position and orientation for the dropoff zone
-  goal.target_pose.pose.position.x = 0.0;
-  goal.target_pose.pose.position.y = 0.0;
+  goal.target_pose.pose.position.x = dropoff_x;
+  goal.target_pose.pose.position.y = dropoff_y;
   goal.target_pose.pose.orientation.w = 1.0;
 
   // send the goal position and orientation for the robot to reach
