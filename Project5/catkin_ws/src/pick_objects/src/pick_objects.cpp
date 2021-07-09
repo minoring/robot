@@ -6,7 +6,7 @@
 // through a SimpleActionClient
 typedef actionlib::SimpleActionClient<move_base_msgs::MoveBaseAction> MoveBaseClient;
 
-double pickup_x = -3.0;
+double pickup_x = -2.0;
 double pickup_y = -1.0;
 double dropoff_x = -1.0;
 double dropoff_y = -1.5;

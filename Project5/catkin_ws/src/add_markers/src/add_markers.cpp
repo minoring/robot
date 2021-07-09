@@ -6,7 +6,7 @@ visualization_msgs::Marker marker;
 ros::Publisher marker_pub;
 bool reached_pickup = false;
 bool reached_dropoff = false;
-double pickup_x = -3.0;
+double pickup_x = -2.0;
 double pickup_y = -1.0;
 double pickup_w = 1.0;
 double dropoff_x = -1.0;
