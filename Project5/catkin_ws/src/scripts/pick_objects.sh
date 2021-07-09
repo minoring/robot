@@ -3,7 +3,7 @@
 xterm -e "source devel/setup.bash; roslaunch turtlebot_gazebo turtlebot_world.launch" &
 sleep 5
 
-xterm -e "source devel/setup.bash; roslaunch turtlebot_gazebo amcl_demo.launch map_file:=map_file:=/home/workspace/robot/Project5/catkin_ws/src/map/turtle_map.yaml" &
+xterm -e "source devel/setup.bash; roslaunch turtlebot_gazebo amcl_demo.launch map_file:=$(rospack find pick_objects)/map/turtle_map.yaml" &
 sleep 5
 
 xterm -e "source devel/setup.bash; roslaunch turtlebot_rviz_launchers view_navigation.launch" &
